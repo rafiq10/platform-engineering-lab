@@ -26,60 +26,67 @@ Reflect
 
 Learning is considered complete only when the knowledge has been applied in the project, documented, and reflected upon.
 
-## Repository Evolution 
-This repository intentionally grows in small, incremental steps. 
-New technologies are introduced only when they solve a real engineering problem within the project. 
-The goal is to understand not only *how* to use a technology, but also *why* it exists and what trade-offs it introduces.
+## Repository Evolution
+
+This repository intentionally grows in small, incremental steps.
+
+New technologies are introduced only when they solve a real engineering problem within the project.
+
+The goal is to understand not only **how** to use a technology, but also **why** it exists and what trade-offs it introduces.
+
 The repository evolves together with the engineer building it. Each phase extends the existing foundation rather than replacing it, allowing both the software and the engineering practices to mature organically.
-**Complexity is introduced deliberately**. Every dependency, framework, tool, or architectural pattern should have a clear justification. The simplest solution that satisfies the current requirements is preferred until new requirements justify additional complexity.
+
+**Complexity is introduced deliberately.**
+
+Every dependency, framework, tool, or architectural pattern should have a clear justification. The simplest solution that satisfies the current requirements is preferred until new requirements justify additional complexity.
 
 ---
 
-# Engineering Principles
+## Engineering Principles
 
 This repository follows a few core principles.
 
-## Build Incrementally
+### Build Incrementally
 
 The project grows through small, focused improvements rather than large rewrites.
 
 Every Pull Request should leave the repository in a better state than before.
 
-## Production Over Demo
+### Production Over Demo
 
 The objective is not to create tutorials or throwaway examples.
 
 Every implementation should be written as if another engineer will maintain it in production.
 
-## Cloud-Provider Agnostic
+### Cloud-Provider Agnostic
 
 The project is intentionally built on open standards and portable technologies.
 
 Cloud integrations are optional extensions rather than core requirements.
 
-## Observability by Design
+### Observability by Design
 
 Every component should be designed to be understandable and debuggable.
 
 Observability is treated as a fundamental engineering concern rather than an afterthought.
 
-## Explain Every Decision
+### Explain Every Decision
 
 Every significant engineering decision should be documented.
 
 Understanding *why* a solution exists is just as important as understanding *how* it works.
 
-## Learn Continuously
+### Learn Continuously
 
 The repository is both a software project and an engineering journal documenting continuous learning and improvement.
 
 ---
 
-# Learning Resources
+## Learning Resources
 
 Different resources serve different purposes.
 
-## Theory
+### Theory
 
 * Official documentation
 * Books
@@ -87,12 +94,12 @@ Different resources serve different purposes.
 * Conference talks
 * Udemy
 
-## Hands-on Labs
+### Hands-on Labs
 
 * KodeKloud
 * iximiuz Labs
 
-## Practical Application
+### Practical Application
 
 Every important concept should eventually be implemented somewhere in this repository.
 
@@ -100,7 +107,7 @@ Theory without implementation is incomplete.
 
 ---
 
-# Roadmap
+## Learning Roadmap
 
 The roadmap is organized into engineering capabilities rather than technologies.
 
@@ -108,13 +115,13 @@ Each phase builds naturally upon the previous one.
 
 ---
 
-# Phase 1 — Go Foundations
+## Phase 1 — Go Foundations
 
-## Objective
+### Objective
 
 Build a production-quality HTTP service while mastering modern Go development practices.
 
-## Topics
+### Topics
 
 * Project structure
 * Modules and packages
@@ -130,22 +137,22 @@ Build a production-quality HTTP service while mastering modern Go development pr
 * Profiling
 * Graceful shutdown
 
-## Deliverables
+### Deliverables
 
-* Production-quality HTTP service
+* Production-ready HTTP service
 * Unit tests
 * Performance benchmarks
 * Engineering documentation
 
 ---
 
-# Phase 2 — Observability
+## Phase 2 — Observability
 
 ## Objective
 
 Understand how modern production systems become observable.
 
-## Topics
+### Topics
 
 * Metrics
 * Prometheus
@@ -157,7 +164,7 @@ Understand how modern production systems become observable.
 * Tempo
 * Alerting
 
-## Deliverables
+### Deliverables
 
 * Prometheus metrics
 * Distributed tracing
@@ -167,13 +174,13 @@ Understand how modern production systems become observable.
 
 ---
 
-# Phase 3 — Linux & Networking
+## Phase 3 — Linux & Networking
 
-## Objective
+### Objective
 
 Understand the operating system and networking foundations behind modern applications.
 
-## Topics
+### Topics
 
 * Processes
 * Threads
@@ -186,7 +193,7 @@ Understand the operating system and networking foundations behind modern applica
 * cgroups
 * Sockets
 
-## Deliverables
+### Deliverables
 
 * Linux experiments
 * Networking exercises
@@ -194,13 +201,13 @@ Understand the operating system and networking foundations behind modern applica
 
 ---
 
-# Phase 4 — Containers
+## Phase 4 — Containers
 
-## Objective
+### Objective
 
 Package and run applications consistently across environments.
 
-## Topics
+### Topics
 
 * Container images
 * Multi-stage builds
@@ -208,20 +215,20 @@ Package and run applications consistently across environments.
 * Container networking
 * Security
 
-## Deliverables
+### Deliverables
 
 * Production-ready container image
 * Local development environment
 
 ---
 
-# Phase 5 — Kubernetes
+## Phase 5 — Kubernetes
 
-## Objective
+### Objective
 
 Deploy and operate cloud-native applications using Kubernetes.
 
-## Topics
+### Topics
 
 * Deployments
 * Services
@@ -233,7 +240,7 @@ Deploy and operate cloud-native applications using Kubernetes.
 * Autoscaling
 * Helm
 
-## Deliverables
+### Deliverables
 
 * Kubernetes deployment
 * Helm chart
@@ -241,13 +248,13 @@ Deploy and operate cloud-native applications using Kubernetes.
 
 ---
 
-# Phase 6 — Platform Engineering
+## Phase 6 — Platform Engineering
 
-## Objective
+### Objective
 
 Build the engineering platform that supports software delivery.
 
-## Topics
+### Topics
 
 * CI/CD
 * GitHub Actions
@@ -256,20 +263,20 @@ Build the engineering platform that supports software delivery.
 * Secrets management
 * Platform automation
 
-## Deliverables
+### Deliverables
 
 * Automated CI pipeline
 * GitOps deployment workflow
 
 ---
 
-# Phase 7 — Distributed Systems
+## Phase 7 — Distributed Systems
 
-## Objective
+### Objective
 
 Design reliable distributed applications.
 
-## Topics
+### Topics
 
 * Service discovery
 * Messaging
@@ -281,7 +288,7 @@ Design reliable distributed applications.
 * Consensus
 * Leader election
 
-## Deliverables
+### Deliverables
 
 * Multi-service architecture
 * Failure simulations
@@ -289,13 +296,13 @@ Design reliable distributed applications.
 
 ---
 
-# Phase 8 — eBPF & Cloud-Native Networking
+## Phase 8 — eBPF & Cloud-Native Networking
 
-## Objective
+### Objective
 
 Understand modern networking and kernel observability.
 
-## Topics
+### Topics
 
 * eBPF
 * Cilium
@@ -304,20 +311,20 @@ Understand modern networking and kernel observability.
 * Network policies
 * Service mesh concepts
 
-## Deliverables
+### Deliverables
 
 * eBPF experiments
 * Kubernetes networking labs
 
 ---
 
-# Phase 9 — Performance Engineering
+## Phase 9 — Performance Engineering
 
-## Objective
+### Objective
 
 Measure, analyze, and improve system performance.
 
-## Topics
+### Topics
 
 * Profiling
 * Benchmarking
@@ -326,7 +333,7 @@ Measure, analyze, and improve system performance.
 * Load testing
 * Scalability
 
-## Deliverables
+### Deliverables
 
 * Benchmark suite
 * Performance reports
@@ -334,13 +341,13 @@ Measure, analyze, and improve system performance.
 
 ---
 
-# Phase 10 — Production Engineering
+## Phase 10 — Production Engineering
 
-## Objective
+### Objective
 
 Operate systems using production-grade engineering practices.
 
-## Topics
+### Topics
 
 * Incident response
 * Root cause analysis
@@ -351,7 +358,7 @@ Operate systems using production-grade engineering practices.
 * Reliability
 * Security
 
-## Deliverables
+### Deliverables
 
 * Operational playbooks
 * Incident simulations
@@ -359,7 +366,7 @@ Operate systems using production-grade engineering practices.
 
 ---
 
-# How Progress Is Measured
+## How Progress Is Measured
 
 Progress is measured by engineering capability rather than completed courses.
 
@@ -371,10 +378,11 @@ A phase is considered complete when:
 * Engineering decisions are documented.
 * Lessons learned have been recorded.
 * The solution could be confidently explained during a senior engineering interview.
+* The implementation has been reviewed.
 
 ---
 
-# Long-Term Vision
+## Long-Term Vision
 
 The long-term goal is to become a platform engineer capable of designing, implementing, operating, and evolving production-grade cloud-native systems using open standards and modern engineering practices.
 
