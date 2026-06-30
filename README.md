@@ -104,6 +104,10 @@ This structure will evolve over time:
 
 The first milestone is building a production-quality Go HTTP service that establishes the engineering standards for everything that follows.
 
+## Documentation
+
+- [Roadmap](docs/roadmap.md)
+
 ---
 
 ## License
