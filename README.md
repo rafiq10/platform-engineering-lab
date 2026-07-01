@@ -107,6 +107,7 @@ The first milestone is building a production-quality Go HTTP service that establ
 ## Documentation
 
 - [Roadmap](docs/roadmap.md)
+- [Engineering Standards](docs/engineering-standards.dm)
 
 ---
 
