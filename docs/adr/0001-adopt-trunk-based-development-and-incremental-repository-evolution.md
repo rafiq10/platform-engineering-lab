@@ -8,55 +8,62 @@ Accepted
 
 ## Context
 
-Platform Engineering Lab is intended to evolve over a long period of time as both an engineering project and a learning platform.
+Platform Engineering Lab is intended to evolve incrementally over a long period of time.
 
-The repository is expected to grow incrementally while continuously incorporating new technologies, engineering practices, and architectural concepts.
+The project prioritizes continuous learning, maintainability, and frequent integration over release management.
 
-Several development workflows were considered, including Git Flow, large feature branches, and direct commits to the main branch.
+At the time of this decision, the repository has a single primary contributor. However, the selected workflow should remain effective if additional contributors join in the future.
 
-The project has a single primary contributor and prioritizes continuous learning, maintainability, and iterative delivery over release management.
+Several development workflows were considered, including Git Flow, direct commits to the main branch, and long-lived feature branches.
+
+The chosen workflow should:
+
+- minimize operational complexity,
+- encourage small, reviewable changes,
+- maintain a clean project history,
+- support continuous learning,
+- scale naturally as the repository grows.
 
 ---
 
 ## Decision
 
-The repository adopts an incremental engineering workflow based on the following principles:
+The repository adopts **Trunk-Based Development**.
 
-- Trunk-Based Development using a single long-lived `main` branch.
-- Short-lived branches for every logical change.
-- Development driven by GitHub Issues.
-- Every change reviewed through a Pull Request.
-- Squash and Merge as the default merge strategy.
-- Small, incremental Pull Requests preferred over large changes.
-- Documentation evolves together with implementation.
-- Significant architectural decisions are recorded using ADRs.
+The `main` branch is the single long-lived branch and represents the latest reviewed and integrated state of the project.
 
-New technologies are introduced only when they solve a concrete engineering problem within the repository.
+Every change is developed on a short-lived branch originating from `main`.
 
-Engineering decisions prioritize simplicity, maintainability, and long-term learning over early optimization or unnecessary complexity.
+Changes are integrated exclusively through Pull Requests using Squash and Merge.
+
+Every Pull Request is associated with a GitHub Issue and represents one logical change.
+
+Repository evolution follows an incremental approach.
+
+New technologies, frameworks, and architectural patterns are introduced only when they solve a concrete engineering problem within the project.
+
+Architectural decisions with long-term impact are documented using Architecture Decision Records.
 
 ---
 
 ## Consequences
 
-Positive consequences:
+### Positive
 
-- Simple Git workflow.
-- Clean repository history.
+- Simple development workflow.
+- Low merge complexity.
+- Clean Git history.
+- Frequent integration.
 - Easier code reviews.
-- Continuous integration of changes.
-- Lower merge complexity.
-- Better documentation.
-- Architectural decisions remain traceable.
-- Repository grows organically.
+- Repository evolution remains incremental.
+- Architectural decisions become traceable.
 
-Negative consequences:
+### Negative
 
-- Features may require multiple Pull Requests before completion.
-- Additional documentation is required.
-- More discipline is required when defining small increments.
-
-These trade-offs are considered acceptable because they improve maintainability and reinforce good engineering practices.
+- Features may require multiple Pull Requests.
+- Additional documentation effort.
+- Greater discipline required when planning work.
+- Less suitable for simultaneous release branches.
 
 ---
 
@@ -92,3 +99,11 @@ The repository favors frequent integration through small, self-contained changes
 
 - Engineering Standards
 - Roadmap
+
+## Review Date
+
+This decision should be revisited if:
+
+- the repository gains multiple active contributors,
+- release management requirements change,
+- the development workflow no longer supports incremental delivery effectively.
