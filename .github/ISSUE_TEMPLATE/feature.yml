@@ -4,6 +4,7 @@ title: "[Feature]: "
 labels:
   - kind:feature
   - priority:medium
+  - area:application
 
 body:
   - type: textarea

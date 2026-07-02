@@ -34,7 +34,7 @@ Describe how the change was verified (tests run, manual validation, screenshots,
 - [ ] Self-review completed
 - [ ] Acceptance criteria satisfied
 - [ ] Documentation updated
-- [ ] Ready for review
+- [ ] Ready for review by another engineer
 - [ ] ADR updated or not required
 
 ---

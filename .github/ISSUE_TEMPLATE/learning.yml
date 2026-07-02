@@ -4,6 +4,7 @@ title: "[Learning]: "
 labels:
   - kind:learning
   - priority:low
+  - area:repository
 
 body:
   - type: textarea

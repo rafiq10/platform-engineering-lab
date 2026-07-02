@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed | Accepted | Superseded
+Proposed | Accepted | Superseded | Rejected
 
 ---
 

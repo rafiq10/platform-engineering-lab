@@ -4,6 +4,7 @@ title: "[Docs]: "
 labels:
   - kind:documentation
   - priority:low
+  - area:repository
 
 body:
   - type: textarea
