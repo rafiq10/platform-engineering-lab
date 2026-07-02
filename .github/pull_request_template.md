@@ -18,7 +18,7 @@ Why is this change needed?
 
 ## Verification
 
-Describe how the change was verified.
+Describe how the change was verified (tests run, manual validation, screenshots, etc.).
 
 ---
 
@@ -35,7 +35,16 @@ Describe how the change was verified.
 - [ ] Acceptance criteria satisfied
 - [ ] Documentation updated
 - [ ] Ready for review
+- [ ] ADR updated or not required
 
 ---
 
+## Lessons Learned
+
+(Optional)
+
+Document any important engineering lessons, trade-offs, or insights gained while implementing this change.
+
+---
 Closes #
+<!-- Example: Closes #12 -->
