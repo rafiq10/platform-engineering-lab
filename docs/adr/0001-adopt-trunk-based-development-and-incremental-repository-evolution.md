@@ -1,4 +1,4 @@
-# ADR-0001: Adopt Incremental Engineering Workflow
+# ADR-0001: Adopt Trunk-Based Development and Incremental Repository Evolution
 
 ## Status
 
@@ -8,41 +8,48 @@ Accepted
 
 ## Context
 
-Platform Engineering Lab is intended to evolve incrementally over a long period of time.
+Platform Engineering Lab is intended to evolve incrementally over a long period of time as both an engineering project and a learning platform.
 
-The project prioritizes continuous learning, maintainability, and frequent integration over release management.
+The repository prioritizes continuous learning, maintainability, and frequent integration over release management.
 
-At the time of this decision, the repository has a single primary contributor. However, the selected workflow should remain effective if additional contributors join in the future.
+At the time of this decision, the repository has a single primary contributor. However, the selected workflow should remain effective if additional contributors join the project in the future.
 
-Several development workflows were considered, including Git Flow, direct commits to the main branch, and long-lived feature branches.
+Several development workflows were considered, including Git Flow, direct commits to the `main` branch, and long-lived feature branches.
 
 The chosen workflow should:
 
-- minimize operational complexity,
-- encourage small, reviewable changes,
-- maintain a clean project history,
-- support continuous learning,
-- scale naturally as the repository grows.
+- minimize operational complexity
+- encourage small, reviewable changes
+- maintain a clean project history
+- support continuous learning
+- scale naturally as the repository grows
 
 ---
 
 ## Decision
 
-The repository adopts **Trunk-Based Development**.
+The repository adopts **Trunk-Based Development** as its development workflow.
 
-The `main` branch is the single long-lived branch and represents the latest reviewed and integrated state of the project.
+The primary objective of adopting Trunk-Based Development is to encourage frequent integration, reduce merge complexity, simplify repository management, and support continuous delivery of small, reviewable improvements.
 
-Every change is developed on a short-lived branch originating from `main`.
+Repository evolution follows an incremental approach in which every change is delivered through small, focused Pull Requests.
 
-Changes are integrated exclusively through Pull Requests using Squash and Merge.
+The workflow is based on the following principles:
 
-Every Pull Request is associated with a GitHub Issue and represents one logical change.
+- The `main` branch is the single long-lived branch and represents the latest reviewed and integrated state of the project.
+- Every change is developed on a short-lived branch originating from `main`.
+- Development is driven by GitHub Issues.
+- Every Pull Request represents a single logical change.
+- Every Pull Request is reviewed before being merged.
+- Pull Requests are merged using **Squash and Merge** whenever practical.
+- Every Pull Request references the GitHub Issue it implements.
+- GitHub issue-closing keywords (for example, `Closes #123`) are used whenever possible.
+- Documentation evolves together with the implementation.
+- Significant architectural decisions are documented using Architecture Decision Records (ADRs).
 
-Repository evolution follows an incremental approach.
+New technologies are introduced only when they solve a concrete engineering problem within the repository.
 
-New technologies, frameworks, and architectural patterns are introduced only when they solve a concrete engineering problem within the project.
-
-Architectural decisions with long-term impact are documented using Architecture Decision Records.
+Engineering decisions prioritize simplicity, maintainability, and long-term learning over unnecessary complexity or premature optimization.
 
 ---
 
@@ -50,20 +57,23 @@ Architectural decisions with long-term impact are documented using Architecture 
 
 ### Positive
 
-- Simple development workflow.
-- Low merge complexity.
-- Clean Git history.
-- Frequent integration.
+- Simple and consistent development workflow.
+- Clean and readable Git history.
+- Lower merge complexity.
 - Easier code reviews.
-- Repository evolution remains incremental.
-- Architectural decisions become traceable.
+- Frequent integration of changes.
+- Architectural decisions remain traceable.
+- Documentation evolves together with the implementation.
+- Repository growth remains incremental and manageable.
 
 ### Negative
 
-- Features may require multiple Pull Requests.
-- Additional documentation effort.
-- Greater discipline required when planning work.
-- Less suitable for simultaneous release branches.
+- Features may require multiple Pull Requests before completion.
+- Additional documentation effort is required.
+- Greater discipline is needed when planning and splitting work into small increments.
+- The workflow is less suitable for projects requiring multiple long-lived release branches.
+
+These trade-offs are considered acceptable because they improve maintainability, encourage continuous integration, and reinforce good engineering practices.
 
 ---
 
@@ -71,25 +81,15 @@ Architectural decisions with long-term impact are documented using Architecture 
 
 ### Git Flow
 
-Rejected.
-
-The additional long-lived branches (`develop`, `release`, `hotfix`) introduce unnecessary complexity for a repository with a single primary contributor.
-
----
+Git Flow was rejected because the additional long-lived branches (`develop`, `release`, `hotfix`) introduce unnecessary complexity for a repository that emphasizes continuous integration and incremental delivery.
 
 ### Direct commits to `main`
 
-Rejected.
+Direct commits were rejected because they bypass the Pull Request workflow, reduce traceability, and eliminate opportunities for structured review and documentation.
 
-Direct commits bypass the Pull Request workflow and eliminate opportunities for structured review and documentation.
+### Long-lived feature branches
 
----
-
-### Large feature branches
-
-Rejected.
-
-Large branches increase merge complexity, make reviews more difficult, and delay integration.
+Long-lived feature branches were rejected because they increase merge complexity, delay integration, and make code reviews more difficult.
 
 The repository favors frequent integration through small, self-contained changes.
 
@@ -97,13 +97,16 @@ The repository favors frequent integration through small, self-contained changes
 
 ## References
 
-- Engineering Standards
-- Roadmap
+- [Engineering Standards](../engineering-standards.md)
+- [Roadmap](../roadmap.md)
 
-## Review Date
+---
 
-This decision should be revisited if:
+## Review
 
-- the repository gains multiple active contributors,
-- release management requirements change,
-- the development workflow no longer supports incremental delivery effectively.
+This decision should be revisited if one or more of the following conditions become true:
+
+- the repository gains multiple long-term contributors with different development workflows
+- release management requirements become significantly more complex
+- the current workflow no longer supports efficient incremental delivery
+- practical experience demonstrates that another workflow would better satisfy the project's engineering principles
