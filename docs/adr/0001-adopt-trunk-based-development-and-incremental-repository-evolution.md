@@ -97,8 +97,16 @@ The repository favors frequent integration through small, self-contained changes
 
 ## References
 
-- [Engineering Standards](../engineering-standards.md)
-- [Roadmap](../roadmap.md)
+Internal
+
+- Engineering Standards
+- Roadmap
+
+External
+
+- Trunk Based Development
+- GitHub Flow
+- Architecture Decision Records
 
 ---
 
