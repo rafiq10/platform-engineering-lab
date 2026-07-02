@@ -106,8 +106,14 @@ The first milestone is building a production-quality Go HTTP service that establ
 
 ## Documentation
 
+### Project
+
 - [Roadmap](docs/roadmap.md)
-- [Engineering Standards](docs/engineering-standards.dm)
+- [Engineering Standards](docs/engineering-standards.md)
+
+### Architecture
+
+- [ADR-0001: Adopt Trunk-Based Development and Incremental Repository Evolution](docs/adr/0001-adopt-trunk-based-development-and-incremental-repository-evolution.md)
 
 ---
 
