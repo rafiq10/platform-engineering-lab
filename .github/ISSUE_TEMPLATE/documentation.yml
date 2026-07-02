@@ -1,0 +1,45 @@
+name: Documentation
+description: Improve or add project documentation.
+title: "[Docs]: "
+labels:
+  - kind:documentation
+  - priority:low
+  - area:repository
+
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What documentation needs to be added or improved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which documents are affected?
+      placeholder: |
+        README.md
+        docs/roadmap.md
+        docs/engineering-standards.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - [ ] Documentation updated
+        - [ ] Internal links verified
+        - [ ] Reviewed for clarity
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Related issues, ADRs, or external documentation.

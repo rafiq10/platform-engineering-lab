@@ -1,0 +1,93 @@
+name: Learning
+description: Research and learn about an engineering topic before implementation.
+title: "[Learning]: "
+labels:
+  - kind:learning
+  - priority:low
+  - area:repository
+
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: Learning Topic
+      description: What engineering topic or technology should be explored?
+      placeholder: |
+        Example:
+        Investigate OpenTelemetry metrics, traces, and logs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is learning this topic valuable for the project?
+      placeholder: |
+        Explain how this knowledge will support future implementation decisions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: Key Questions
+      description: What questions should be answered?
+      placeholder: |
+        - What problem does it solve?
+        - How does it work?
+        - What are the trade-offs?
+        - What alternatives exist?
+        - How is it commonly used in production?
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Learning Resources
+      description: Courses, books, documentation, RFCs, blog posts, videos, labs, etc.
+      placeholder: |
+        - Official documentation
+        - KodeKloud
+        - iximiuz Labs
+        - Udemy
+        - Conference talks
+        - RFCs
+
+  - type: textarea
+    id: experiments
+    attributes:
+      label: Planned Experiments
+      description: Describe practical experiments or labs that should be performed.
+      placeholder: |
+        Example:
+        - Build a small prototype
+        - Complete a KodeKloud lab
+        - Measure performance
+        - Compare two approaches
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success Criteria
+      description: When can this learning task be considered complete?
+      placeholder: |
+        - I understand the core concepts.
+        - I can explain the trade-offs.
+        - I completed practical experiments.
+        - I documented my findings.
+        - I can confidently discuss the topic in an interview.
+    validations:
+      required: true
+
+  - type: textarea
+    id: followup
+    attributes:
+      label: Potential Follow-up Work
+      description: Which implementation or ADR might result from this research?
+      placeholder: |
+        Example:
+        - ADR: Adopt OpenTelemetry
+        - Implement distributed tracing
+        - Add Prometheus metrics

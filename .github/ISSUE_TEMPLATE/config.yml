@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Engineering Standards
+    url: https://github.com/rafiq10/platform-engineering-lab/blob/main/docs/engineering-standards.md
+    about: Read the engineering standards before opening an issue.
+
+  - name: Roadmap
+    url: https://github.com/rafiq10/platform-engineering-lab/blob/main/docs/roadmap.md
+    about: Review the long-term roadmap before proposing new work.
